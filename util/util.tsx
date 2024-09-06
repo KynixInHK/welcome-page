@@ -1,5 +1,6 @@
-import {JSX} from "react";
+import {JSX, Suspense} from "react";
 import Image from "next/image";
+import {Skeleton} from "antd";
 
 export const runCommand: (command: string) => JSX.Element = (command: string) => {
     switch (command) {
@@ -85,7 +86,9 @@ export const runCommand: (command: string) => JSX.Element = (command: string) =>
 
                 <p>或者可以加入我们的纳新QQ群组，和我们共同成长：</p>
                 <p>
-                    <Image src="/qr.png" alt="qr code" width={1500} height={1500} style={{width: "50%"}}/>
+                    <Suspense fallback={<Skeleton.Image active={true}/>}>
+                        <Image src="https://pictures.axiomatrix.org/qr.png" alt="qr code" width={1500} height={1500} style={{width: "50%"}}/>
+                    </Suspense>
                 </p>
             </div>
         }
