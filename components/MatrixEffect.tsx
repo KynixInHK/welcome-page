@@ -44,7 +44,7 @@ const MatrixEffect: React.FC = () => {
 
     function createDivs() {
         if (containerRef.current) {
-            for (let i = 0; i < 45; i++) {
+            for (let i = 0; i < 90; i++) {
                 let p = document.createElement('p');
                 containerRef.current.append(p);
                 divs.push(p);
