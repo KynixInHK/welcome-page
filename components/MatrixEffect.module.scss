@@ -1,0 +1,24 @@
+.container {
+  color: darkgreen;
+  background-color: rgba(0, 0, 0, 0.6);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  overflow: hidden;
+  white-space: pre;
+
+  p {
+    position: relative;
+    top: -100px;
+    transform: scale(0.6, 1);
+    margin: 2px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+
+    span {
+      color: white;
+      transform: scale(0.6, 1);
+    }
+  }
+}

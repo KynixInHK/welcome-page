@@ -1,0 +1,98 @@
+@import "@/style/global-p";
+
+.FancyButton {
+  @include text-shadow;
+  position: relative;
+  margin: 1rem;
+  display: inline-block;
+  padding: 25px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8px);
+  &:active {
+    transform: scale(0.9);
+  }
+  span {
+    position: absolute;
+    display: block;
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #6bdc67);
+      animation: animate1 1s linear infinite;
+    }
+
+    &:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #6bdc67);
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #6bdc67);
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.50s;
+    }
+
+    &:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #6bdc67);
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}

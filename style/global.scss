@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "font";
+body {
+  width: 100vw;
+  height: 100vh;
+  //background-image: url("https://pic.imgdb.cn/item/66d5c32fd9c307b7e92ef82a.jpg");
+  //background-image: url("https://pictures.axiomatrix.org/img3.wallspic.com-ni_ming_de-xu_gou_de_ren_wu-liang_dian-hei_ke-bei_guang-5333x3000.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  //font-family: modern, sans-serif;
+  font-family: Pixel, sans-serif;
+  font-size: 20px;
+  text-shadow: 0 0 5px lime;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}

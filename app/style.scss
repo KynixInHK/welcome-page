@@ -1,0 +1,40 @@
+@import "@/style/global-p";
+
+.back {
+  background-image: url("https://pictures.axiomatrix.org/img3.wallspic.com-ni_ming_de-xu_gou_de_ren_wu-liang_dian-hei_ke-bei_guang-5333x3000.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Spark {
+  //animation: flicker 1.5s infinite linear;
+  @include text-shadow;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    @include text-shadow;
+  }
+  20%, 24%, 55% {
+    @include text-shadow-lite;
+  }
+}
+
+.show-enter {
+  transform: translate(-50%, -100%);
+}
+
+.show-enter-active {
+  transition: all 0.8s ease;
+  transform: translate(-50%, 0);
+}
+
+.show-exit {
+  transform: translate(-50%, 0);
+}
+
+.show-exit-active {
+  transition: all 0.8s ease;
+  transform: translate(-50%, -100%);
+}
