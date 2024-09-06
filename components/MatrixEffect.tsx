@@ -58,7 +58,7 @@ const MatrixEffect: React.FC = () => {
         return () => clearInterval(interval);
     }, []);
 
-    return <div className={styles.container} ref={containerRef}></div>;
+    return <div className={styles.container + " w-full"} ref={containerRef}></div>;
 };
 
 export default MatrixEffect;
